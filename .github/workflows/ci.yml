@@ -14,6 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
         username: ${{ secrets.docker_username }}
+        docker_repo: for-dealfem
     strategy:
         matrix:
             directory:
@@ -32,7 +33,7 @@ jobs:
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
       - name: Build image
-        run: docker build ${{ matrix.directory }} --tag "${{ env.username }}/for-deamfem:${{ matrix.directory }}"
+        run: docker build ${{ matrix.directory }} --tag "${{ env.username }}/${{ env.docker_repo }}:${{ matrix.directory }}"
 
       - name: Push image
-        run: docker push "${{ env.username }}/for-dealfem:${{ matrix.directory }}"
+        run: docker push "${{ env.username }}/${{ env.docker_repo }}:${{ matrix.directory }}"
