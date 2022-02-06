@@ -32,7 +32,7 @@ RUN apt-get update -q && \
       trilinos-all-dev \
       zlib1g-dev
 ENV DEAL_II_DIR=/opt/dealii
-ARG DEAL_II_BUILD_TYPE=DebugRelease
+ARG DEAL_II_BUILD_TYPE=Debug
 ARG DEAL_II_EXAMPLES=OFF
 RUN DEAL_II_SRC=/opt/dealii-src && \
     git clone https://github.com/dealii/dealii.git $DEAL_II_SRC -b master --depth 1 -q && \
