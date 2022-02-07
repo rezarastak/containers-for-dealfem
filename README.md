@@ -1,6 +1,6 @@
 # containers-for-dealfem
 [![](https://img.shields.io/docker/pulls/rrastak/for-dealfem?style=plastic "Docker hub")](https://hub.docker.com/r/rrastak/for-dealfem)
-[![CI](https://github.com/rezarastak/containers-for-dealfem/workflows/ci/badge.svg)](https://github.com/rezarastak/containers-for-dealfem/actions?query=workflow%3Aci)
+[![For-dealfem](https://github.com/rezarastak/containers-for-dealfem/actions/workflows/ci.yml/badge.svg)](https://github.com/rezarastak/containers-for-dealfem/actions/workflows/ci.yml)
 
 Creates docker containers to compile and run `dealfem`.
 In short, these docker containers encapsulate the [deal.II](https://dealii.org) library compiled with additional dependencies [muparser](https://beltoforion.de/en/muparser/), [MPI](https://en.wikipedia.org/wiki/Message_Passing_Interface), and [Trilinos](https://trilinos.github.io).
