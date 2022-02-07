@@ -6,7 +6,6 @@ RUN apt-get update -q && \
       build-essential \
       git \
       cmake \
-      ninja-build \
       python \
       numdiff \
       libarpack2-dev \
@@ -36,7 +35,7 @@ ARG DEAL_II_BUILD_TYPE=Debug
 ARG DEAL_II_EXAMPLES=OFF
 RUN DEAL_II_SRC=/opt/dealii-src && DEAL_II_BIN=$DEAL_II_SRC/build && \
     git clone https://github.com/dealii/dealii.git $DEAL_II_SRC -b master --depth 1 -q && \
-    cmake -GNinja \
+    cmake \
       -D DEAL_II_COMPONENT_EXAMPLES=$DEAL_II_EXAMPLES \
       -D CMAKE_BUILD_TYPE=$DEAL_II_BUILD_TYPE \
       -D CMAKE_CXX_STANDARD=17 \
@@ -48,6 +47,6 @@ RUN DEAL_II_SRC=/opt/dealii-src && DEAL_II_BIN=$DEAL_II_SRC/build && \
       -D DEAL_II_WITH_LAPACK=ON \
       -D DEAL_II_WITH_MUPARSER=ON \
       --install-prefix $DEAL_II_DIR -S $DEAL_II_SRC -B $DEAL_II_BIN && \
-    cmake --build $DEAL_II_BIN --parallel --verbose && \
+    cmake --build $DEAL_II_BIN --parallel 3 --verbose && \
     cmake --install $DEAL_II_BIN && \
     rm -rf $DEAL_II_SRC
