@@ -1,4 +1,4 @@
-ARG GCC_TRILINOS_DOCKER_IMAGE=rrastak/trilinos:13.0.0-gcc
+ARG GCC_TRILINOS_DOCKER_IMAGE=rrastak/trilinos:13.2.0-gcc
 FROM $GCC_TRILINOS_DOCKER_IMAGE
 LABEL maintainer="reza.rastak@gmail.com"
 ENV P4EST_DIR=/opt/p4est
@@ -31,6 +31,6 @@ RUN DEAL_II_SRC=/opt/dealii-src && DEAL_II_BIN=$DEAL_II_SRC/build && \
       -D DEAL_II_WITH_LAPACK=ON \
       -D DEAL_II_WITH_MUPARSER=ON \
       --install-prefix $DEAL_II_DIR -S $DEAL_II_SRC -B $DEAL_II_BIN && \
-    cmake --build $DEAL_II_BIN --parallel 3 && \
+    cmake --build $DEAL_II_BIN --parallel 2 && \
     cmake --install $DEAL_II_BIN && \
     rm -rf $DEAL_II_SRC
