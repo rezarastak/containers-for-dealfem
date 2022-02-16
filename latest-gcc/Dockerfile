@@ -31,6 +31,6 @@ RUN DEAL_II_SRC=/opt/dealii-src && DEAL_II_BIN=$DEAL_II_SRC/build && \
       -D DEAL_II_WITH_LAPACK=ON \
       -D DEAL_II_WITH_MUPARSER=ON \
       --install-prefix $DEAL_II_DIR -S $DEAL_II_SRC -B $DEAL_II_BIN && \
-    cmake --build $DEAL_II_BIN --parallel 2 && \
+    cmake --build $DEAL_II_BIN --parallel 2 --verbose && \
     cmake --install $DEAL_II_BIN && \
     rm -rf $DEAL_II_SRC
