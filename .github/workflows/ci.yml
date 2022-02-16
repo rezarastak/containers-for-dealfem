@@ -18,7 +18,6 @@ jobs:
     strategy:
         matrix:
             directory:
-              - candi
               - latest
               - latest-gcc
               - latest-clang
