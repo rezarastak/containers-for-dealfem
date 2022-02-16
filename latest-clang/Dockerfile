@@ -1,4 +1,4 @@
-ARG CLANG_TRILINOS_DOCKER_IMAGE=rrastak/trilinos:13.2.0-clang
+ARG CLANG_TRILINOS_DOCKER_IMAGE=rrastak/trilinos:13.2.0-openmpi-clang
 FROM $CLANG_TRILINOS_DOCKER_IMAGE
 LABEL maintainer="reza.rastak@gmail.com"
 RUN apt-get update -q && apt-get install -y -q \

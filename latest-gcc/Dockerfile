@@ -1,4 +1,4 @@
-ARG GCC_TRILINOS_DOCKER_IMAGE=rrastak/trilinos:13.2.0-gcc
+ARG GCC_TRILINOS_DOCKER_IMAGE=rrastak/trilinos:13.2.0-openmpi-gcc
 FROM $GCC_TRILINOS_DOCKER_IMAGE
 LABEL maintainer="reza.rastak@gmail.com"
 ENV P4EST_DIR=/opt/p4est
