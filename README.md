@@ -12,11 +12,9 @@ Three different images are provided here:
  * **latest**: The master-branch of `dealii` built using Trilinos that is provided by `ubuntu`.
  * **latest-gcc**: Contains the latest container build using a gcc toolchain.
  * **latest-clang**: The latest latest container using a clang toolchain.
- * **candi**: Master branch of `dealii` built from the [candi](https://github.com/dealii/candi) scripts.
 
  | Image | Size |
  |---|---|
  |`rrastak/for-dealfem:latest`    | ![](https://img.shields.io/docker/image-size/rrastak/for-dealfem/latest)|
  |`rrastak/for-dealfem:latest-gcc`    | ![](https://img.shields.io/docker/image-size/rrastak/for-dealfem/latest-gcc)|
  |`rrastak/for-dealfem:latest-clang`    | ![](https://img.shields.io/docker/image-size/rrastak/for-dealfem/latest-clang)|
- |`rrastak/for-dealfem:candi`    | ![](https://img.shields.io/docker/image-size/rrastak/for-dealfem/candi)|
